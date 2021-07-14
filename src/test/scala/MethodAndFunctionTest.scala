@@ -55,9 +55,6 @@ object MethodAndFunctionTest {
 
 
 
-  val t = (12.3, 1000, "spark")
-  val t1 = new Tuple1(1) // 必须 1 个元素
-  val t4 = new Tuple4(1,2.0,"",3) // 必须 4 个元
 }
 //
 //方法和函数的总结（重点）：
