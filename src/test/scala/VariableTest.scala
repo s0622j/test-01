@@ -14,6 +14,9 @@ object VariableTest {
     // 声明多个变量
     var age2,fv = 18
 
+    println(18/2)
+    println(19.toFloat/2)
+//    a.formatted("%.2f")   #其中2表示保留小数位数
   }
 
 }
