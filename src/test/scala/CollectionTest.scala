@@ -36,6 +36,7 @@ object CollectionTest {
       sum
 
 
+
       // kv 数据类型： Array[(String,Double)]
       // t 的数据类型是元组（String,Double）
 
