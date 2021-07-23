@@ -1,5 +1,7 @@
 object CollectionTest {
   def main(args: Array[String]): Unit = {
+
+
     val arr = Array("aa", "bb", "cc", "dd")
     //    arr.reduce((x,y)=>自定义操作)
     //    自定义操作的方法，必须是 x 数据类型上支持的方法。x 可以是任意类型
@@ -25,8 +27,15 @@ object CollectionTest {
     // 2 分组 按照城市名称来分组
     val data2: Map[String, Array[(String, Double)]] = data1.groupBy(t => t._1)
     // 统计
-    val data4 = data2.mapValues({
-      kv =>
+    val data4 = data2.mapValues(kv =>{
+        var v = kv.flatMap(v => v._2.toString.split(" "))
+      var sum = 0d
+        for (e <- v) {
+          sum = sum + e.toDouble
+        }
+      sum
+
+
       // kv 数据类型： Array[(String,Double)]
       // t 的数据类型是元组（String,Double）
 
@@ -48,4 +57,9 @@ object CollectionTest {
     }
     println(result)
   }
+
+  //  def arrSum(arr: Array[(String, Double)]): Int = {
+  //    for()
+  //    1
+  //  }
 }

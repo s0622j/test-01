@@ -10,7 +10,7 @@ object ArrayYieldTest {
     //map 相当于将数组中的每一个元素取出来，应用传进去的函数
     val r = arr.filter(x => x % 2 == 0).map(x => x * 10)
     println(r.toBuffer)
-
+    println("************************")
 
     val arr2 = Array(2, 5, 1, 4, 3)
     println(arr2.sum)
