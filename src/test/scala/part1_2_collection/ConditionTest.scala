@@ -1,3 +1,5 @@
+package part1_2_collection
+
 object ConditionTest {
   def main(args: Array[String]) {
     val x = 1
@@ -15,7 +17,7 @@ object ConditionTest {
     val z = if (x > 1) 1 else "error"
     //打印 z 的值
     println(z)
-//    混合类型会返回父类类型。
+    //    混合类型会返回父类类型。
     //if 和 else if
     val k = if (x < 0) 0 else if (x >= 1) 1 else -1
     println(k)

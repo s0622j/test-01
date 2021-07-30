@@ -1,15 +1,16 @@
+package part1_2_collection
+
 import org.apache.commons.lang3.time.FastDateFormat
 import org.slf4j.{Logger, LoggerFactory}
 import until.TimeUtil
 
-
 object test {
   private val logger: Logger = LoggerFactory.getLogger(TimeUtil.getClass)
+
   def main(args: Array[String]): Unit = {
 
     val factInMills: Long = until.TimeUtil.parseTime("aa")
     println(factInMills)
-
 
 
     val timeFormat: String = "yyyy-MM-dd HH:mm:ss"
@@ -19,7 +20,7 @@ object test {
     val fastDateFormat: FastDateFormat = FastDateFormat.getInstance(timeFormat)
 
     var timeMills: Long = 0L
-//    timeMills = fastDateFormat.parse(time).getTime
+    //    timeMills = fastDateFormat.parse(time).getTime
     try {
       timeMills = fastDateFormat.parse(time).getTime
     } catch {

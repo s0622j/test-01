@@ -1,3 +1,5 @@
+package part1_2_collection
+
 object CollectionTest {
   def main(args: Array[String]): Unit = {
 
@@ -27,12 +29,12 @@ object CollectionTest {
     // 2 分组 按照城市名称来分组
     val data2: Map[String, Array[(String, Double)]] = data1.groupBy(t => t._1)
     // 统计
-    val data4 = data2.mapValues(kv =>{
-        var v = kv.flatMap(v => v._2.toString.split(" "))
+    val data4 = data2.mapValues(kv => {
+      var v = kv.flatMap(v => v._2.toString.split(" "))
       var sum = 0d
-        for (e <- v) {
-          sum = sum + e.toDouble
-        }
+      for (e <- v) {
+        sum = sum + e.toDouble
+      }
       sum
 
 
@@ -57,10 +59,42 @@ object CollectionTest {
         (city, wendu)
     }
     println(result)
+
+
+    println("*********************************")
+    /**
+     * 交集，并集 差集
+     * intersect union diff
+     * union 是一个轻量级的方法
+     * //比较常用的方法：先 union，然后再分组
+     * distinct 元素去重
+     * mkString 把集合中的所有元素拼接成字符串
+     * mkString(分隔符)
+     * take(n) 获取集合中前几个元素 没有排序
+     * slice(from,until) 截取元素，提取元素列表中的 from 到 until 位置的元素
+     * 聚合 aggregate
+     * val arr = List(List(1, 2, 3), List(2))
+     * val result = arr.aggregate(0)(_+_.sum, _+_)
+     */
+    val arr001 = Array("aa", "bb", "cc", "dd")
+    val arr002 = Array("11", "22", "cc", "dd")
+
+    println(arr001.intersect(arr002).toBuffer)
+    println(arr001.union(arr002).toBuffer)
+    println(arr001.diff(arr002).toBuffer)
+    println(arr001.diff(arr002).distinct.toBuffer)
+    println(arr001.union(arr002).mkString(","))
+    println(arr001.union(arr002).take(3).toBuffer)
+    println(arr001.union(arr002).slice(2, 3).toBuffer)
+    val arr003 = List(List(1, 2, 3), List(2))
+    println(arr003.aggregate(0)(_ + _.sum, _ + _))
+
   }
 
   //  def arrSum(arr: Array[(String, Double)]): Int = {
   //    for()
   //    1
   //  }
+
+
 }

@@ -1,3 +1,5 @@
+package part1_2_collection
+
 import scala.collection.mutable
 
 object MutSetTest {
@@ -23,20 +25,20 @@ object MutSetTest {
     println(another.getClass.getName) // scala.collection.immutable.Set
 
     /**
-    // Option 是 Some 和 None 的父类
-    // Some 代表有（多例），样例类
-    // None 代表没有（单例），样例对象
-    val mp = Map("a" -> 1, "b" -> 2, "c" -> 3)
-    val r: Int = mp("d")
-    // Map 的 get 方法返回的为 Option, 也就意味着 rv 可能取到也有可能没取到
-    val rv: Option[Int] = mp.get("d")
-    // 如果 rv=None 时， 会出现异常情况
-    val r1 = rv.get
-    // 使用 getOrElse 方法，
-    // 第一个参数为要获取的 key,
-    // 第二个参数为默认值， 如果没有获取到 key 对应的值就返回默认值
-    val r2 = mp.getOrElse("d", -1)
-    println(r2)
+     *  // Option 是 Some 和 None 的父类
+     *  // Some 代表有（多例），样例类
+     *  // None 代表没有（单例），样例对象
+     *  val mp = Map("a" -> 1, "b" -> 2, "c" -> 3)
+     *  val r: Int = mp("d")
+     *  // Map 的 get 方法返回的为 Option, 也就意味着 rv 可能取到也有可能没取到
+     *  val rv: Option[Int] = mp.get("d")
+     *  // 如果 rv=None 时， 会出现异常情况
+     *  val r1 = rv.get
+     *  // 使用 getOrElse 方法，
+     *  // 第一个参数为要获取的 key,
+     *  // 第二个参数为默认值， 如果没有获取到 key 对应的值就返回默认值
+     *  val r2 = mp.getOrElse("d", -1)
+     *  println(r2)
      */
   }
 }

@@ -1,5 +1,6 @@
-import scala.collection.mutable.ArrayBuffer
+package part1_2_collection
 
+import scala.collection.mutable.ArrayBuffer
 
 object ArrayTest {
   def main(args: Array[String]) {

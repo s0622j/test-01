@@ -1,3 +1,5 @@
+package part1_2_collection
+
 object ImmutListTest {
   def main(args: Array[String]) {
     //创建一个不可变的集合

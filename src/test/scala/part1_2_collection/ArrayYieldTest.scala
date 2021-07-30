@@ -1,3 +1,5 @@
+package part1_2_collection
+
 object ArrayYieldTest {
   def main(args: Array[String]) {
     //定义一个数组

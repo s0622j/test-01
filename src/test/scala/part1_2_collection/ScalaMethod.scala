@@ -1,3 +1,5 @@
+package part1_2_collection
+
 /**
  * 方法的定义及调用
  *

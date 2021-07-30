@@ -1,3 +1,5 @@
+package part1_2_collection
+
 object ForTest {
   def main(args: Array[String]) {
     //for(i <- 数组)

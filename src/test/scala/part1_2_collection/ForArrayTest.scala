@@ -1,3 +1,5 @@
+package part1_2_collection
+
 object ForArrayTest {
   def main(args: Array[String]) {
     //初始化一个数组
@@ -12,11 +14,11 @@ object ForArrayTest {
 
     println("-----------------------------")
     for (i <- (arr.length - 1 until(-1, -1))) {
-      println((arr(i),i))
+      println((arr(i), i))
     }
 
     for (i <- (arr.length - 1 to(0, -1))) {
-      println((arr(i),i))
+      println((arr(i), i))
     }
     println("*****************************")
 
@@ -31,6 +33,3 @@ object ForArrayTest {
     for (i <- 1 to 10 by 2) println(i)
   }
 }
-
-
-

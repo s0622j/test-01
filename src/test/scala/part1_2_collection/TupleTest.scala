@@ -1,18 +1,20 @@
+package part1_2_collection
+
 object TupleTest {
 
   def main(args: Array[String]): Unit = {
     val t: (Double, Int, String) = (12.3, 1000, "spark")
     val t1 = new Tuple1(1) // 必须 1 个元素
-    val t4 = new Tuple4(1,2.0,"",3) // 必须 4 个元
+    val t4 = new Tuple4(1, 2.0, "", 3) // 必须 4 个元
 
     println(t4._1)
     //zip 命令可以将多个值绑定在一起，生成元组
-    val name=Array("xx1","xx2","xx3","xx4")
-    val values=Array(1,2,3)
-    var tt = name.zip(values)  // 拉链操作 zip 命令可以将多个值绑定在一起，生成元组
-    println("长度："+tt.length)
-    println("长度0："+tt(0))
-    for (x <- tt){
+    val name = Array("xx1", "xx2", "xx3", "xx4")
+    val values = Array(1, 2, 3)
+    var tt = name.zip(values) // 拉链操作 zip 命令可以将多个值绑定在一起，生成元组
+    println("长度：" + tt.length)
+    println("长度0：" + tt(0))
+    for (x <- tt) {
       println(x)
     }
 

@@ -1,3 +1,5 @@
+package part1_2_collection
+
 object MapTest {
   def main(args: Array[String]): Unit = {
     /**
