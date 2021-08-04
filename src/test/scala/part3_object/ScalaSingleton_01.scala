@@ -11,7 +11,7 @@ package part3_object
  */
 
 //单例对象
-object ScalaSingleton {
+object ScalaSingleton_01 {
   def saySomething(msg: String) = {
     println(msg)
   }
@@ -20,9 +20,9 @@ object ScalaSingleton {
 
 object test {
   def main(args: Array[String]): Unit = {
-    ScalaSingleton.saySomething("singleton....")
-    println(ScalaSingleton)
-    println(ScalaSingleton)
+    ScalaSingleton_01.saySomething("singleton....")
+    println(ScalaSingleton_01)
+    println(ScalaSingleton_01)
     // 输出结果:
     // cn.demo.ScalaSingleton$@28f67ac7
     // cn.demo.ScalaSingleton$@28f67ac7
