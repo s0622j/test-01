@@ -15,9 +15,13 @@
         <spark.version>2.4.0</spark.version>
         <scala.binary.version>2.11</scala.binary.version>
         <scala.version>2.11.12</scala.version>
+        <scala.compat.version>2.11</scala.compat.version>
         <hadoop.version>2.6.0</hadoop.version>
         <hive.version>1.2.1</hive.version>
         <scala.maven.plugin.version>4.4.0</scala.maven.plugin.version>
+
+        <akka.version>2.4.17</akka.version>
+
     </properties>
 
     <dependencies>
@@ -162,12 +166,26 @@
             <version>1.5.4</version>
         </dependency>
 
+
+        <!-- 添加 akka 的 actor 依赖 -->
+        <dependency>
+            <groupId>com.typesafe.akka</groupId>
+            <artifactId>akka-actor_${scala.compat.version}</artifactId>
+            <version>${akka.version}</version>
+        </dependency>
+        <!-- 多进程之间的 Actor 通信 -->
+        <dependency>
+            <groupId>com.typesafe.akka</groupId>
+            <artifactId>akka-remote_${scala.compat.version}</artifactId>
+            <version>${akka.version}</version>
+        </dependency>
     </dependencies>
 
 
 
     <build>
         <!--Project Build特有的<...Directory>往往配置在父项目中，供所有父子项目使用。-->
+        <!--指定源码包路径-->
         <sourceDirectory>src/main/scala</sourceDirectory>
         <testSourceDirectory>src/test/scala</testSourceDirectory>
         <plugins>
