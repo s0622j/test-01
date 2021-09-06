@@ -1,11 +1,11 @@
-public class Demo {
-    public static void main(String[] args) {
-        String newCall = evaluate("12345678911");
-        System.out.println("---------------" + newCall);
-    }
+import org.apache.hadoop.hive.ql.exec.Description;
+import org.apache.hadoop.hive.ql.exec.UDF;
 
 
-    public static String evaluate(String phone){
+@Description(name = "myUDFTest")
+public class UDFTest extends UDF {
+    //重写evaluate方法
+    public String evaluate(String phone){
         if (phone.length() == 11){
             String res = phone.substring(0, 3) + "****" + phone.substring(7, phone.length());
             System.out.println(res);
@@ -16,5 +16,3 @@ public class Demo {
 
     }
 }
-
-
