@@ -179,6 +179,18 @@
             <artifactId>akka-remote_${scala.compat.version}</artifactId>
             <version>${akka.version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.elasticsearch.client</groupId>
+            <artifactId>transport</artifactId>
+            <version>7.14.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.elasticsearch.client</groupId>
+            <artifactId>elasticsearch-rest-high-level-client</artifactId>
+            <version>7.14.1</version>
+        </dependency>
     </dependencies>
 
 
